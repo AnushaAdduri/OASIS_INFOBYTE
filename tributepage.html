@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to B.R. Ambedkar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:white #e8f0f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            text-shadow: 2px 2px 4px #000000;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: rgb(180, 240, 207);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: slideIn 1s ease-out;
+        }
+
+        .photo {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .photo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .bio {
+            margin: 2rem 0;
+        }
+
+        .bio h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        .bio p {
+            line-height: 1.6;
+            text-align: justify;
+            padding: 1rem;
+            background-color: #e6f0ff;
+            border-radius: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+            animation: fadeInBox 1s ease-in-out;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #003366;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .bio p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInBox {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Dr. B.R. Ambedkar</h1>
+</header>
+
+<div class="container">
+    <div class="photo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xcahcjED0IRkCrTpFlTGhRj-kVDiB-NIrw&s" alt="Dr. B.R. Ambedkar">
+    </div>
+
+    <div class="bio">
+        <h2>Biography</h2>
+        <p>Dr. Bhimrao Ramji Ambedkar was an Indian jurist, economist, politician, and social reformer who inspired the Dalit Buddhist movement and campaigned against social discrimination towards the untouchables (Dalits). He was independent India's first Minister of Law and Justice and the chief architect of the Constitution of India.</p>
+        <p>Born on 14 April 1891 in Mhow, Madhya Pradesh, Ambedkar faced severe discrimination from a young age due to his caste. Despite this, he went on to earn doctorates in economics from both Columbia University and the London School of Economics. He also gained a reputation as a scholar for his research in law, economics, and political science.</p>
+        <p>Throughout his life, Ambedkar worked tirelessly to eradicate social evils like caste discrimination and was instrumental in drafting the Indian Constitution. His work laid the foundation for an inclusive society based on principles of justice, liberty, and equality. Dr. Ambedkar passed away on 6 December 1956, leaving behind a legacy of social reform and justice.</p>
+    </div>
+</div>
+
+<footer>
+    <p><h1>Designed By ADDURI ANUSHA</h1></p>
+</footer>
+
+</body>
+</html>
