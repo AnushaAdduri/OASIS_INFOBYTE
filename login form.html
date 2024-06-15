@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #e0f7fa;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .heading {
+            color: #00796b;
+        }
+
+        .title {
+            font-weight: 400;
+            letter-spacing: 1.5px;
+        }
+
+        .container {
+            height: 600px;
+            width: 400px;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .btn {
+            height: 50px;
+            width: 240px;
+            margin: 20px auto;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 25px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+        }
+
+        .login, .signup {
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .login:hover, .signup:hover {
+            color: #00796b; /* Add hover effect for buttons */
+        }
+
+        .form-section {
+            height: 480px;
+            width: 400px;
+            padding: 20px 0;
+            display: flex;
+            position: relative;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .login-box, .signup-box {
+            height: 100%;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 40px;
+            position: absolute;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .login-box {
+            left: 0;
+        }
+
+        .signup-box {
+            left: 400px;
+        }
+
+        .ele {
+            height: 50px;
+            width: 100%;
+            outline: none;
+            border: none;
+            color: #4d4d4d;
+            background-color: #f0f0f0;
+            border-radius: 25px;
+            padding-left: 20px;
+            font-size: 16px;
+        }
+
+        .clkbtn {
+            height: 50px;
+            width: 130px;
+            border-radius: 25px;
+            background-image: linear-gradient(to right, #00bfa5, #00796b);
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 650px) {
+            .container {
+                height: 600px;
+                width: 300px;
+            }
+
+            .title {
+                font-size: 15px;
+            }
+
+            .btn {
+                height: 50px;
+                width: 200px;
+            }
+
+            .login, .signup {
+                font-size: 17px;
+            }
+
+            .form-section {
+                height: 480px;
+                width: 300px;
+            }
+
+            .login-box, .signup-box {
+                width: 300px;
+            }
+
+            .ele {
+                height: 50px;
+                width: 90%;
+                font-size: 15px;
+            }
+
+            .clkbtn {
+                height: 50px;
+                width: 120px;
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="heading">User Authentication</h1>
+        <h3 class="title">Login & Registration Form</h3>
+    </header>
+
+    <div class="container">
+        <div class="btn">
+            <button class="login">Login</button>
+            <button class="signup">Signup</button>
+        </div>
+
+        <div class="form-section">
+            <div class="login-box">
+                <input type="email" class="email ele" placeholder="youremail@email.com">
+                <input type="password" class="password ele" placeholder="password">
+                <button class="clkbtn">Login</button>
+            </div>
+            <div class="signup-box">
+                <input type="text" class="name ele" placeholder="Enter your name">
+                <input type="email" class="email ele" placeholder="youremail@email.com">
+                <input type="password" class="password ele" placeholder="password">
+                <input type="password" class="password ele" placeholder="Confirm password">
+                <button class="clkbtn">Signup</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let signup = document.querySelector(".signup");
+        let login = document.querySelector(".login");
+        let loginBox = document.querySelector(".login-box");
+        let signupBox = document.querySelector(".signup-box");
+
+        signup.addEventListener("click", () => {
+            loginBox.style.left = "-400px";
+            signupBox.style.left = "0";
+        });
+
+        login.addEventListener("click", () => {
+            loginBox.style.left = "0";
+            signupBox.style.left = "400px";
+        });
+    </script>
+</body>
+</html>
